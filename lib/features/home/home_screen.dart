@@ -6,6 +6,7 @@ import '../../models/organ_model.dart';
 import '../../providers/anatomy_provider.dart';
 import '../../services/anatomy_data_service.dart';
 import '../../widgets/glass_card.dart';
+import '../../widgets/app_logo.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,27 +28,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Container(
-                        width: 44,
-                        height: 44,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          gradient: const LinearGradient(
-                            colors: [AppColors.primaryBlue, AppColors.secondaryCyan],
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: AppColors.secondaryCyan.withOpacity(0.4),
-                              blurRadius: 10,
-                            ),
-                          ],
-                        ),
-                        child: const Icon(
-                          Icons.accessibility_new_rounded,
-                          color: Colors.white,
-                          size: 24,
-                        ),
-                      ),
+                      const AppLogo(size: 44),
                       const SizedBox(width: 12),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
